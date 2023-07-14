@@ -41,8 +41,10 @@ main = do
   flag <- readFile "flag.txt"
 
   let encryptedText = encrypt flag
+  putStrLn ("===============================")
   putStr ("Enter your name: ")
   hFlush stdout 
   userInput <- getLine   
+  putStrLn ("===============================")
   putStrLn ("Hello " ++ userInput ++ ", this is your flag: ") 
   printAscii encryptedText
